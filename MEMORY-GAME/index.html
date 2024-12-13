@@ -8,10 +8,15 @@
 </head>
 <body>
     <h2>Score: <span id="result"></span></h2>
-    <div id="grid">
-        
-
-    </div>
+    <h3>Time: <span id="timer">0</span> seconds</h3>
+    <h3>Best Time: <span id="best-time">--</span> seconds</h3>
+    <label for="difficulty">Select Difficulty: </label>
+    <select id="difficulty">
+        <option value="easy">Easy (12 cards)</option>
+        <option value="medium">Medium (16 cards)</option>
+        <option value="hard">Hard (20 cards)</option>
+    </select>
+    <div id="grid"></div>
     <script src="script.js" charset="UTF-8"></script>
 </body>
 </html>

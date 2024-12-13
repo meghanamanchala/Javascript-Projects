@@ -1,7 +1,27 @@
-#grid{
+#grid {
     width: 400px;
     height: 300px;
     display: flex;
     flex-wrap: wrap;
+}
 
+#grid img {
+    width: 80px;
+    height: 100px;
+    margin: 5px;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+#grid img.flipped {
+    transform: rotateY(180deg);
+}
+
+#grid img {
+    backface-visibility: hidden;
+}
+
+select {
+    margin: 10px 0;
 }
