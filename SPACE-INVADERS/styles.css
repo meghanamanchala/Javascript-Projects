@@ -29,3 +29,8 @@ background-color: green;
     background-color: red;
 }
 
+
+.boss {
+    background-color: firebrick; /* Boss is red */
+    border-radius: 40px; /* Make the boss appear larger */
+}
