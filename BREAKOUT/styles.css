@@ -27,3 +27,12 @@
     border-radius: 10px;
     background-color: red;
   }
+
+  .power-up {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: gold;
+    border-radius: 50%;
+  }
+  
