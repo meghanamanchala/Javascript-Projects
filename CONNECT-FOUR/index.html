@@ -1,17 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Connect Four Game</title>
+  <meta charset="utf-8">
+  <title>Connect Four</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" charset="utf-8" defer></script>
 </head>
 <body>
-  <h3>Connect Four</h3>
-  <div id="timer">Time Left: 10s</div>
-  <div id="current-player">Current Player: 1</div>
-  <div class="grid"></div>
-  <div id="result"></div>
-  <script src="scripts.js"></script>
+  <h3>The current Player is: Player <span id="current-player">1</span></h3>
+  <h3 id="result"></h3>
+  <div class="grid">
+    <!-- 42 grid cells for Connect Four board -->
+    <!-- Create 42 divs for the grid cells -->
+    <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+    <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+    <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+    <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+    <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+    <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+  </div>
+
+  <h3>Score:</h3>
+  <p>Player One: <span id="player-one-score">0</span></p>
+  <p>Player Two: <span id="player-two-score">0</span></p>
+
 </body>
 </html>

@@ -1,32 +1,88 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
 }
 
-h3 {
-  text-align: center;
+h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
 }
 
+/* Result and Player Info Section */
+#result {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#current-player {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#player-one-score,
+#player-two-score {
+  font-size: 20px;
+  margin: 10px;
+}
+
+#scoreboard {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Grid Layout */
 .grid {
   display: grid;
-  grid-template-columns: repeat(7, 50px);
-  grid-template-rows: repeat(6, 50px);
+  grid-template-columns: repeat(7, 60px);
+  grid-template-rows: repeat(6, 60px);
   gap: 5px;
-  justify-content: center;
-  margin-top: 20px;
+  background-color: #0d6efd;
+  border-radius: 10px;
+  padding: 5px;
 }
 
-.grid div {
+.cell {
+  width: 60px;
+  height: 60px;
+  background-color: #0092cc;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cell.taken {
+  cursor: not-allowed;
+}
+
+/* Player Discs */
+.disc {
   width: 50px;
   height: 50px;
-  background-color: #f4f4f4;
   border-radius: 50%;
-  transition: background-color 0.5s ease, transform 0.5s ease;
-  cursor: pointer;
-  position: relative;
-}
-
-.taken {
-  background-color: yellow;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.3s ease-out;
 }
 
 .player-one {
@@ -34,15 +90,50 @@ h3 {
 }
 
 .player-two {
-  background-color: blue;
+  background-color: yellow;
 }
 
-#timer {
-  text-align: center;
+/* Button and Timer */
+button {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.timer {
   font-size: 20px;
+  color: #333;
   margin-top: 20px;
 }
 
-#current-player {
-  font-weight: bold;
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(7, 50px);
+    grid-template-rows: repeat(6, 50px);
+  }
+
+  .cell {
+    width: 50px;
+    height: 50px;
+  }
+
+  .disc {
+    width: 40px;
+    height: 40px;
+  }
+
+  #scoreboard {
+    flex-direction: column;
+  }
 }
